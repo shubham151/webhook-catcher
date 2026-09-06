@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f3f5f3;
+  --surface: #ffffff;
+  --surface-2: #ebeeec;
+  --ink: #171b1a;
+  --muted: #626b68;
+  --faint: #8d9793;
+  --line: #dde2df;
+  --line-strong: #c3ccc7;
+  --accent: #0c6a60;
+  --accent-soft: #dcecea;
+  --warn: #8a5410;
+  --warn-soft: #f6ecdc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131716;
+    --surface: #1a1f1e;
+    --surface-2: #222827;
+    --ink: #e7ebe9;
+    --muted: #98a29e;
+    --faint: #76817d;
+    --line: #2a312f;
+    --line-strong: #3a423f;
+    --accent: #4dbdad;
+    --accent-soft: #16302d;
+    --warn: #d0994c;
+    --warn-soft: #2e2618;
+  }
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+
+  --font-sans: var(--font-ibm-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-ibm-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+}
